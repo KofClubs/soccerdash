@@ -72,6 +72,7 @@ class MyTCPHandler(socketserver.StreamRequestHandler):
             if len(self.data) == 0:
                 print('returned')
                 return
+            # print('1')
             print(self.data.decode('utf-8'))
             queue.put(self.data.decode('utf-8'))
 
