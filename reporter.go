@@ -2,10 +2,11 @@ package soccerdash
 
 import (
 	"encoding/json"
-	"github.com/sirupsen/logrus"
 	"net"
 	"sync"
 	"time"
+
+	"github.com/sirupsen/logrus"
 )
 
 type Reporter struct {
@@ -80,7 +81,7 @@ func (r *Reporter) Report(key string, value interface{}, global bool) {
 func (r *Reporter) init() {
 	r.inited = true
 	if r.BufferSize == 0 {
-		r.BufferSize = 20
+		r.BufferSize = 90
 	}
 	r.outgoingChannel = make(chan *Message, r.BufferSize+10)
 	r.quit = make(chan bool)
