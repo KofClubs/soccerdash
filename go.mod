@@ -1,4 +1,4 @@
-module github.com/latifrons/soccerdash
+module github.com/KofClubs/soccerdash
 
 go 1.13
 
